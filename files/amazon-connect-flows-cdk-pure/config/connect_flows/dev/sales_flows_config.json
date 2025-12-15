@@ -1,0 +1,32 @@
+{
+  "instance_name": "dev-connect-instance",
+  "queue_arn": "arn:aws:connect:us-east-1:123456789012:instance/dev-instance-id/queue/dev-sales-queue-id",
+  "flows": [
+    {
+      "filename": "sales/sales_main_flow.json",
+      "name": "SalesMainFlow",
+      "type": "CONTACT_FLOW",
+      "description": "Sales main contact flow",
+      "parameter_updates": {
+        "12345678-1234-1234-1234-123456789012": {
+          "Text": "$.Attributes.welcomeMessage"
+        },
+        "87654321-4321-4321-4321-210987654321": {
+          "QueueId": "$.Attributes.queueArn"
+        }
+      }
+    },
+    {
+      "filename": "sales/sales_hold_flow.json",
+      "name": "SalesHoldFlow",
+      "type": "CUSTOMER_HOLD",
+      "description": "Sales hold music flow"
+    },
+    {
+      "filename": "sales/sales_transfer_flow.json",
+      "name": "SalesTransferFlow",
+      "type": "TRANSFER",
+      "description": "Sales transfer flow"
+    }
+  ]
+}

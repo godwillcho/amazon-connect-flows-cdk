@@ -1,0 +1,32 @@
+{
+  "instance_name": "dev-connect-instance",
+  "queue_arn": "arn:aws:connect:us-east-1:123456789012:instance/dev-instance-id/queue/dev-support-queue-id",
+  "flows": [
+    {
+      "filename": "support/support_main_flow.json",
+      "name": "SupportMainFlow",
+      "type": "CONTACT_FLOW",
+      "description": "Support main contact flow",
+      "parameter_updates": {
+        "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+          "Text": "$.Attributes.supportGreeting"
+        },
+        "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb": {
+          "QueueId": "$.Attributes.supportQueueArn"
+        }
+      }
+    },
+    {
+      "filename": "support/support_hold_flow.json",
+      "name": "SupportHoldFlow",
+      "type": "CUSTOMER_HOLD",
+      "description": "Support hold music flow"
+    },
+    {
+      "filename": "support/support_transfer_flow.json",
+      "name": "SupportTransferFlow",
+      "type": "TRANSFER",
+      "description": "Support transfer flow"
+    }
+  ]
+}

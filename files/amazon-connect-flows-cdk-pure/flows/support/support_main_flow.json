@@ -1,0 +1,28 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+  "Metadata": {
+    "entryPointPosition": {"x": 20, "y": 20},
+    "snapToGrid": false
+  },
+  "Actions": [
+    {
+      "Identifier": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "Type": "MessageParticipant",
+      "Parameters": {
+        "Text": "PLACEHOLDER - This will be updated by CDK"
+      },
+      "Transitions": {
+        "NextAction": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"
+      }
+    },
+    {
+      "Identifier": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "Type": "TransferToQueue",
+      "Parameters": {
+        "QueueId": "PLACEHOLDER - This will be updated by CDK"
+      },
+      "Transitions": {}
+    }
+  ]
+}

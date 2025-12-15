@@ -1,0 +1,38 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "12345678-1234-1234-1234-123456789012",
+  "Metadata": {
+    "entryPointPosition": {"x": 20, "y": 20},
+    "snapToGrid": false,
+    "ActionMetadata": {
+      "12345678-1234-1234-1234-123456789012": {
+        "position": {"x": 100, "y": 100}
+      },
+      "87654321-4321-4321-4321-210987654321": {
+        "position": {"x": 300, "y": 100}
+      }
+    }
+  },
+  "Actions": [
+    {
+      "Identifier": "12345678-1234-1234-1234-123456789012",
+      "Type": "MessageParticipant",
+      "Parameters": {
+        "Text": "PLACEHOLDER - This will be updated by CDK"
+      },
+      "Transitions": {
+        "NextAction": "87654321-4321-4321-4321-210987654321",
+        "Errors": [],
+        "Conditions": []
+      }
+    },
+    {
+      "Identifier": "87654321-4321-4321-4321-210987654321",
+      "Type": "TransferToQueue",
+      "Parameters": {
+        "QueueId": "PLACEHOLDER - This will be updated by CDK"
+      },
+      "Transitions": {}
+    }
+  ]
+}

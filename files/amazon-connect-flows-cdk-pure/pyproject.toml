@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amazon-connect-flows-cdk"
+version = "1.0.0"
+description = "CDK stack for deploying Amazon Connect flows"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["aws", "cdk", "amazon-connect", "contact-flows", "infrastructure"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "aws-cdk-lib>=2.120.0",
+    "constructs>=10.0.0,<11.0.0",
+    "boto3>=1.34.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "black>=23.12.1",
+    "flake8>=7.0.0",
+    "mypy>=1.8.0",
+    "boto3-stubs[connect]>=1.34.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/amazon-connect-flows-cdk"
+Documentation = "https://github.com/yourusername/amazon-connect-flows-cdk#readme"
+Repository = "https://github.com/yourusername/amazon-connect-flows-cdk"
+Issues = "https://github.com/yourusername/amazon-connect-flows-cdk/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stacks*", "utils.connect_flows*"]
+exclude = ["tests*", "scripts*", "docs*", "examples*"]
+
+[tool.black]
+line-length = 120
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = "-v --strict-markers"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

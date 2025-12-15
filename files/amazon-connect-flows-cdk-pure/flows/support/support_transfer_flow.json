@@ -1,0 +1,18 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "support-transfer-1",
+  "Metadata": {
+    "entryPointPosition": {"x": 20, "y": 20},
+    "snapToGrid": false
+  },
+  "Actions": [
+    {
+      "Identifier": "support-transfer-1",
+      "Type": "MessageParticipant",
+      "Parameters": {
+        "Text": "Connecting you to a specialist."
+      },
+      "Transitions": {}
+    }
+  ]
+}

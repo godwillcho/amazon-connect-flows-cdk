@@ -1,0 +1,18 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "transfer-1",
+  "Metadata": {
+    "entryPointPosition": {"x": 20, "y": 20},
+    "snapToGrid": false
+  },
+  "Actions": [
+    {
+      "Identifier": "transfer-1",
+      "Type": "MessageParticipant",
+      "Parameters": {
+        "Text": "Transferring your call now."
+      },
+      "Transitions": {}
+    }
+  ]
+}

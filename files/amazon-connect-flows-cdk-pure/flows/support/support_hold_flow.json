@@ -1,0 +1,18 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "support-hold-1",
+  "Metadata": {
+    "entryPointPosition": {"x": 20, "y": 20},
+    "snapToGrid": false
+  },
+  "Actions": [
+    {
+      "Identifier": "support-hold-1",
+      "Type": "MessageParticipant",
+      "Parameters": {
+        "Text": "Your call is important to us. Please hold."
+      },
+      "Transitions": {}
+    }
+  ]
+}
